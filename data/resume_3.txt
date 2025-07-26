@@ -1,0 +1,69 @@
+**Zyra Quillan**  
+123 Innovation Drive  
+Tech City, CA 90210  
+(555) 123-4567  
+zyra.quillan@email.com  
+[LinkedIn Profile](https://linkedin.com/in/zyraquillan)  
+
+---
+
+**PROFESSIONAL SUMMARY**  
+Dedicated software developer with over 3 years of experience in designing, developing, and implementing software solutions. Proficient in data analysis and programming languages, with a strong ability to collaborate effectively in team environments. Committed to leveraging technical skills to enhance system performance and drive business results.
+
+---
+
+**EDUCATION**  
+Bachelor of Science in Computer Science  
+University of Techland, Tech City, CA  
+Graduated: May 2020  
+
+---
+
+**WORK EXPERIENCE**  
+
+**Software Developer**  
+Innovative Solutions Inc., Tech City, CA  
+June 2020 – Present  
+- Developed and maintained web applications using JavaScript, React, and Node.js, resulting in a 30% increase in user engagement.
+- Collaborated with cross-functional teams to analyze user requirements and deliver software solutions that improved operational efficiency.
+- Conducted data analysis using Python and SQL, generating reports that informed key business decisions and strategy adjustments.
+- Implemented Agile methodologies to enhance project management and team productivity.
+
+**Data Analyst Intern**  
+DataSense Analytics, Tech City, CA  
+January 2019 – May 2020  
+- Assisted in data collection, cleaning, and analysis, supporting ongoing projects that improved forecasting accuracy by 15%.
+- Created visualizations using Tableau to present insights to stakeholders, facilitating data-driven decision-making.
+- Developed automated data processing scripts in Python, reducing manual work time by 25%.
+
+---
+
+**TECHNICAL SKILLS**  
+- Programming Languages: JavaScript, Python, Java  
+- Web Technologies: HTML, CSS, React, Node.js  
+- Data Analysis Tools: SQL, Tableau, Excel  
+- Development Methodologies: Agile, Scrum  
+- Version Control: Git, GitHub  
+
+---
+
+**CERTIFICATIONS**  
+- Certified Agile Developer (CAD)  
+- Data Science Professional Certificate (Coursera)  
+
+---
+
+**PROFESSIONAL AFFILIATIONS**  
+- Member, Association for Computing Machinery (ACM)  
+- Member, Women in Technology International (WITI)  
+
+---
+
+**PROJECTS**  
+- **E-Commerce Web Application**: Led a team of 4 to build a fully functional e-commerce platform using MERN stack, integrating payment gateway and real-time tracking features.  
+- **Predictive Analytics Model**: Developed a predictive model using machine learning algorithms in Python that improved sales forecasting accuracy by 20%.
+
+---
+
+**REFERENCES**  
+Available upon request.

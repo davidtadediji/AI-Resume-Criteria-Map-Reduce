@@ -1,0 +1,68 @@
+**Zanetta Quillan**  
+[Your Address]  
+[City, State, ZIP]  
+[Your Phone Number]  
+[Your Email Address]  
+[LinkedIn Profile URL]  
+
+---
+
+**PROFESSIONAL SUMMARY**  
+Detail-oriented software developer with over 4 years of experience in software development and data analysis. Proven ability to design, implement, and maintain software applications. Strong technical skills in programming, data visualization, and database management, with a passion for optimizing processes and enhancing user experience.
+
+---
+
+**EDUCATION**  
+Bachelor of Science in Computer Science  
+University of Technopolis, Technopolis City, ST  
+Graduated: May 2019
+
+---
+
+**PROFESSIONAL EXPERIENCE**  
+
+**Software Developer**  
+Innovatech Solutions, Technopolis City, ST  
+June 2019 - Present  
+- Developed and maintained web applications using JavaScript, Python, and SQL to improve user experience and increase engagement by 30%.
+- Collaborated with cross-functional teams to gather requirements and translate them into technical specifications, resulting in the successful delivery of 10+ projects on time.
+- Performed data analysis using Python and Excel, providing actionable insights that led to a 15% increase in operational efficiency.
+- Implemented Agile methodologies in the development process, enhancing team productivity by 20%.
+
+**Data Analyst**  
+DataMinds Analytics, Technopolis City, ST  
+July 2018 - May 2019  
+- Analyzed large datasets using R and SQL to uncover trends and patterns that informed business strategies, leading to a 25% growth in client satisfaction.
+- Created interactive dashboards using Tableau to visualize data trends for stakeholders, facilitating data-driven decision-making.
+- Assisted in the development of predictive models that increased forecasting accuracy by 40%.
+
+---
+
+**TECHNICAL SKILLS**  
+- Programming Languages: Python, JavaScript, SQL, R  
+- Tools & Technologies: Tableau, Git, Docker, Agile Methodologies  
+- Database Management: MySQL, PostgreSQL  
+- Data Analysis: Data Cleaning, Data Visualization, Statistical Analysis  
+
+---
+
+**CERTIFICATIONS**  
+- Certified Scrum Master (CSM)  
+- Microsoft Certified: Data Analyst Associate  
+
+---
+
+**PROFESSIONAL AFFILIATIONS**  
+- Member, Association for Computing Machinery (ACM)  
+- Member, Data Science Society  
+
+---
+
+**PROJECTS**  
+- **E-Commerce Website Development**: Led a team to develop a fully functional e-commerce platform, incorporating user authentication, payment processing, and product management features, resulting in a 50% increase in sales within 3 months.
+- **Customer Segmentation Model**: Developed a customer segmentation model using machine learning techniques that improved targeted marketing efforts and increased conversion rates by 20%.
+
+---
+
+**REFERENCES**  
+Available upon request.
