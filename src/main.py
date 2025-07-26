@@ -1,5 +1,5 @@
-from constants import EVALUATIONS, CANDIDATE_NAME, QUALIFIES, SUMMARY, REASONS
-from workflow.flow import create_resume_processing_flow
+from constants import EVALUATIONS, CANDIDATE_NAME, QUALIFIES, FILTER_SUMMARY, REASONS
+from src.workflow.flow import create_resume_processing_flow
 
 
 def main():
@@ -9,7 +9,7 @@ def main():
 
     resume_flow.run(shared=shared)
 
-    if SUMMARY in shared:
+    if FILTER_SUMMARY in shared:
         print("\nDetailed evaluation results:")
         for filename, evaluation in shared.get(EVALUATIONS, {}).items():
             qualified = "Yes" if evaluation.get(QUALIFIES, False) else "X"

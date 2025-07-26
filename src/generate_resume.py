@@ -1,6 +1,7 @@
 import asyncio
 import os
-from constants import CRITERIA_FOR_QUALIFICATION, DIR_NAME
+
+from constants import MANDATORY_CRITERIA, DATA_DIR_NAME
 from utils import call_llm
 
 generation_prompt = """generate a single pre-personalized resume that {condition} this criteria:
@@ -9,10 +10,11 @@ Note: just generate the resume don't preface or add any conclusions, respond wit
 use an unusual name for candidate.
 """
 
-data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), DIR_NAME)
+data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), DATA_DIR_NAME)
 os.makedirs(data_dir, exist_ok=True)
 
 NUMBER_OF_RESUMES = 5
+
 
 def is_even(number):
     if number % 2 == 0:
@@ -22,7 +24,7 @@ def is_even(number):
 
 async def async_call_llm(step, prompt):
     formatted_prompt = prompt.format(condition="fails" if is_even(step) else "completely passes",
-                                     criteria_for_qualification=CRITERIA_FOR_QUALIFICATION)
+                                     criteria_for_qualification=MANDATORY_CRITERIA)
     loop = asyncio.get_running_loop()
     response = await loop.run_in_executor(None, call_llm, formatted_prompt, 0.8)
     print(f"Task {step} complete")

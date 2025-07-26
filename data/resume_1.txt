@@ -23,7 +23,7 @@ Graduated: May 2019
 
 **Software Developer**  
 Innovatech Solutions, Technopolis City, ST  
-June 2019 - Present  
+June 2019 - Present
 - Developed and maintained web applications using JavaScript, Python, and SQL to improve user experience and increase engagement by 30%.
 - Collaborated with cross-functional teams to gather requirements and translate them into technical specifications, resulting in the successful delivery of 10+ projects on time.
 - Performed data analysis using Python and Excel, providing actionable insights that led to a 15% increase in operational efficiency.
@@ -31,7 +31,7 @@ June 2019 - Present
 
 **Data Analyst**  
 DataMinds Analytics, Technopolis City, ST  
-July 2018 - May 2019  
+July 2018 - May 2019
 - Analyzed large datasets using R and SQL to uncover trends and patterns that informed business strategies, leading to a 25% growth in client satisfaction.
 - Created interactive dashboards using Tableau to visualize data trends for stakeholders, facilitating data-driven decision-making.
 - Assisted in the development of predictive models that increased forecasting accuracy by 40%.
