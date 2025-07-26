@@ -24,20 +24,32 @@ def call_llm(prompt, temperature=0.0):
     return r.choices[0].message.content
 
 
-if __name__ == "__main__":
-    print(call_llm("Tell me a short joke"))
-
-from google import genai
-
-google_client = genai.Client(api_key=google_api_key)
+import openai
+from typing import List
 
 
-def generate_embedding(texts: List):
-    result = google_client.models.embed_content(
-        model="gemini-embedding-001",
-        contents=texts)
-    return result.embeddings[0]
+def generate_embedding(texts: List[str], model="text-embedding-3-small") -> List[float]:
+    response = openai.embeddings.create(
+        input=texts,
+        model=model
+    )
 
+    # If batch input, response.data is a list of embeddings
+    return response.data[0].embedding  # returns embedding for first input
+
+
+
+# from google import genai
+# from google.genai import types
+# google_client = genai.Client(api_key=google_api_key)
+#
+# def generate_embedding(texts: List, task_type="SEMANTIC_SIMILARITY"):
+#     result = google_client.models.embed_content(
+#         model="gemini-embedding-001",
+#         contents=texts,
+#         config=types.EmbedContentConfig(task_type=task_type))
+#
+#     return result.embeddings[0].values
 
 import warnings
 from sentence_transformers import CrossEncoder
@@ -50,23 +62,3 @@ def call_reranker(query, items: List):
         reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
         scores = reranker.predict([[query, item] for item in items])
     return scores
-
-# import os
-# directory_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), DATA_DIR_NAME)
-#
-# query = MANDATORY_CRITERIA
-#
-# resumes = []
-# filenames = []
-#
-# for filename in os.listdir(directory_path):
-#     if filename.endswith(".txt"):
-#         file_path = os.path.join(directory_path, filename)
-#         with open(file_path, "r", encoding="utf-8") as file:
-#             content = file.read()
-#             resumes.append(content)
-#             filenames.append(filename)
-#
-# scores = call_reranker(query, resumes)
-# for name, score in zip(filenames, scores):
-#     print(f"{score:.2f} - {name}")

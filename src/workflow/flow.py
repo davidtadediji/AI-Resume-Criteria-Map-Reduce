@@ -1,7 +1,7 @@
 from pocketflow import Flow
 
-from .nodes import ReadResumesNode, ReduceFilterResultsNode, EmbedCriteriaNode, FilterResumesNode, RankResumeNode, \
-    ProcessRankResultsNode
+from .nodes import ReadResumesNode, ReduceFilterResultsNode, EmbedCriteriaNode, RankResumesNode, \
+    ProcessRankResultsNode, PrefilterResumesNode, EmbedResumesNode, ScreenResumesNode
 
 
 def create_resume_processing_flow():
@@ -9,11 +9,13 @@ def create_resume_processing_flow():
 
     embed_criteria_node = EmbedCriteriaNode()
     read_resumes_node = ReadResumesNode()
-    filter_resumes_node = FilterResumesNode()
+    embed_resumes_node = EmbedResumesNode()
+    prefilter_resumes_node = PrefilterResumesNode()
+    screen_resumes_node = ScreenResumesNode()
     reduce_filter_results_node = ReduceFilterResultsNode()
-    rank_resume_node = RankResumeNode()
+    rank_resumes_node = RankResumesNode()
     process_rank_results_node = ProcessRankResultsNode()
 
-    read_resumes_node >> filter_resumes_node >> reduce_filter_results_node >> rank_resume_node >> process_rank_results_node
+    embed_criteria_node >> read_resumes_node >> embed_resumes_node >> prefilter_resumes_node >> screen_resumes_node >> reduce_filter_results_node >> rank_resumes_node >> process_rank_results_node
 
-    return Flow(start=read_resumes_node)
+    return Flow(start=embed_criteria_node)

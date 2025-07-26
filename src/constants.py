@@ -1,6 +1,7 @@
-DATA_DIR_NAME = "data"
+DATA_DIR_NAME = "data/"
 SCREENING_TOP_K = 10
 INTERVIEW_TOP_K = 3
+THRESHOLD = 0.35
 
 # ===== State ======
 RESUMES = "resumes"
@@ -14,9 +15,11 @@ QUALIFIED_COUNT = "qualified_count"
 QUALIFIED_PERCENTAGE = "qualified_percentage"
 TOTAL_CANDIDATES = "total_candidates"
 USER = "user"
-CRITERIA = 'criteria_embedding'
+CRITERIA_EMBEDDING = 'criteria_embedding'
+RESUME_EMBEDDINGS = 'resume_embeddings'
 QUALIFIED_RESUMES = 'qualified_resumes_files'
 RANKED_RESUMES = 'ranked_resumes'
+RELEVANT_RESUMES = 'relevant_resumes'
 
 # ===== Prompts =======
 MANDATORY_CRITERIA = """Criteria for qualification.

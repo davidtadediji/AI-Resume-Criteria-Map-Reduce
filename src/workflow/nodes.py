@@ -1,24 +1,29 @@
 import os
 from typing import Dict
 
+import numpy as np
 import yaml
 from pocketflow import Node, BatchNode
+from sklearn.metrics.pairwise import cosine_similarity
 
 from src.constants import RESUMES, DATA_DIR_NAME, DEFAULT, EVALUATIONS, QUALIFIES, CANDIDATE_NAME, FILTER_SUMMARY, \
-    CRITERIA, \
-    MANDATORY_CRITERIA, QUALIFIED_RESUMES, FULL_CRITERIA, RANKED_RESUMES
+    CRITERIA_EMBEDDING, \
+    MANDATORY_CRITERIA, QUALIFIED_RESUMES, FULL_CRITERIA, RANKED_RESUMES, RESUME_EMBEDDINGS, THRESHOLD, RELEVANT_RESUMES
 from src.utils import call_llm, generate_embedding, call_reranker
 
 
 class EmbedCriteriaNode(Node):
     """Embed the criteria for candidate qualification"""
 
+    def prep(self, shared):
+        return MANDATORY_CRITERIA
+
     def exec(self, prep_res):
-        criteria_embedding = generate_embedding([MANDATORY_CRITERIA])
+        criteria_embedding = generate_embedding([prep_res])
         return criteria_embedding
 
     def post(self, shared, prep_res, exec_res):
-        shared[CRITERIA] = exec_res
+        shared[CRITERIA_EMBEDDING] = exec_res
         return DEFAULT
 
 
@@ -43,11 +48,51 @@ class ReadResumesNode(Node):
         return DEFAULT
 
 
-class FilterResumesNode(BatchNode):
+class EmbedResumesNode(BatchNode):
+    """Embed the criteria for candidate qualification"""
+
+    def prep(self, shared):
+        resumes = list(shared[RESUMES].items())
+        return resumes
+
+    def exec(self, prep_res):
+        filename, content = prep_res
+        resume_embedding = generate_embedding([content])
+        return filename, resume_embedding
+
+    def post(self, shared, prep_res, exec_res):
+        shared[RESUME_EMBEDDINGS] = {filename: result for filename, result in exec_res}
+        return DEFAULT
+
+
+class PrefilterResumesNode(Node):
+    def prep(self, shared):
+        return shared[CRITERIA_EMBEDDING], shared[RESUME_EMBEDDINGS], shared[RESUMES]
+
+    def exec(self, prep_res):
+        criteria_embedding, resume_embeddings, resumes = prep_res
+        criteria_vector = np.array(criteria_embedding).reshape(1, -1)  # (1, D)
+        resume_similarity_scores = [cosine_similarity(criteria_vector, np.array(embedding).reshape(1, -1)).item() for
+                                    _, embedding in resume_embeddings.items()]
+
+        relevant_resumes = {}
+        for filename, resume, score in zip(resumes.keys(), resumes.values(), resume_similarity_scores):
+            print(score)
+            if score > THRESHOLD:
+                relevant_resumes[filename] = resume
+
+        return relevant_resumes
+
+    def post(self, shared, prep_res, exec_res):
+        shared[RELEVANT_RESUMES] = exec_res
+        return DEFAULT
+
+
+class ScreenResumesNode(BatchNode):
     """Batch processing: Evaluate each resume to determine if the candidate qualifies."""
 
     def prep(self, shared):
-        return list(shared[RESUMES].items())
+        return list(shared[RELEVANT_RESUMES].items())
 
     def exec(self, resume_item):
         """Evaluate a single resume."""
@@ -123,12 +168,13 @@ class ReduceFilterResultsNode(Node):
             for name in filter_summary['qualified_names']:
                 print(f"- {name}")
 
-        shared[QUALIFIED_RESUMES] = {filename: shared[RESUMES][filename] for filename in qualified_resume_files}
+        shared[QUALIFIED_RESUMES] = {filename: shared[RELEVANT_RESUMES][filename] for filename in
+                                     qualified_resume_files}
 
         return DEFAULT
 
 
-class RankResumeNode(Node):
+class RankResumesNode(Node):
     def prep(self, shared):
         return shared[QUALIFIED_RESUMES]
 
