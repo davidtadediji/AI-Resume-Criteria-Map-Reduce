@@ -1,0 +1,19 @@
+Name: Brian Lee
+
+Education:
+- Bachelor's Degree in Software Engineering, Middlesex University, 2018–2020
+
+Work Experience:
+- IT Support Technician, LocalFix LLC (2020–2021)
+  - Provided hardware troubleshooting and software installation
+  - Assisted customers with password resets and virus removals
+- Office Manager, Swift Courier Services (2021–2023)
+  - Managed office inventory and scheduled delivery routes
+  - Used Excel for daily reporting
+- Freelance
+  - Software Engineering for local business
+
+Skills:
+- Microsoft Office Suite
+- Basic Linux knowledge
+- Typing speed: 85 wpm

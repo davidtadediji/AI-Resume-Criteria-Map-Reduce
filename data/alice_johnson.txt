@@ -1,0 +1,20 @@
+Name: Alice Johnson
+
+Education:
+- B.Sc. in Computer Science, University of Illinois, 2015–2019
+- Minor in Statistics
+
+Work Experience:
+- Software Engineer, Google (2019–2022)
+  - Built scalable backend services in Go and Python
+  - Designed a distributed caching solution that improved latency by 23%
+  - Mentored 2 junior engineers
+- Senior Software Engineer, OpenAI (2022–present)
+  - Led a team of 5 to deploy ML infrastructure for NLP models
+  - Developed model evaluation and inference pipelines in PyTorch and Rust
+  - Worked with DevOps to scale Kubernetes workloads and CI/CD automation
+
+Skills:
+- Languages: Python, Go, C++, JavaScript
+- Tools: Docker, Kubernetes, AWS, GCP, Git, Jenkins
+- Machine Learning: PyTorch, TensorFlow, Hugging Face
