@@ -1,4 +1,4 @@
-DATA_DIR_NAME = "../data"
+DATA_DIR_NAME = "data"
 SCREENING_TOP_K = 10
 INTERVIEW_TOP_K = 3
 
@@ -16,6 +16,7 @@ TOTAL_CANDIDATES = "total_candidates"
 USER = "user"
 CRITERIA = 'criteria_embedding'
 QUALIFIED_RESUMES = 'qualified_resumes_files'
+RANKED_RESUMES = 'ranked_resumes'
 
 # ===== Prompts =======
 MANDATORY_CRITERIA = """Criteria for qualification.

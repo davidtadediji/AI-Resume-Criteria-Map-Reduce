@@ -8,29 +8,29 @@ zyra.quillan@email.com
 ---
 
 **PROFESSIONAL SUMMARY**  
-Dedicated software developer with years of experience in designing, developing, and implementing software solutions. Proficient in data analysis and programming languages, with a strong ability to collaborate effectively in team environments. Committed to leveraging technical skills to enhance system performance and drive business results.
+Dedicated software developer with 2 years of experience in designing, developing, and implementing software solutions. Proficient in data analysis and programming languages, with a strong ability to collaborate effectively in team environments. Committed to leveraging technical skills to enhance system performance and drive business results.
 
 ---
 
-**EDUCATION**  
-Bachelor of Science in Computer Science  
-University of Techland, Tech City, CA  
-Graduated: May 2020  
+**EDUCATION**
+Bachelor of Science in Computer Science
+University of Techland, Tech City, CA
+Graduated: May 2020
 
 ---
 
-**WORK EXPERIENCE**  
+**WORK EXPERIENCE**
 
-**Software Developer**  
-Innovative Solutions Inc., Tech City, CA  
+**Software Developer**
+Innovative Solutions Inc., Tech City, CA
 June 2024 – Present
 - Developed and maintained web applications using JavaScript, React, and Node.js, resulting in a 30% increase in user engagement.
 - Collaborated with cross-functional teams to analyze user requirements and deliver software solutions that improved operational efficiency.
 - Conducted data analysis using Python and SQL, generating reports that informed key business decisions and strategy adjustments.
 - Implemented Agile methodologies to enhance project management and team productivity.
 
-**Data Analyst Intern**  
-DataSense Analytics, Tech City, CA  
+**Data Analyst Intern**
+DataSense Analytics, Tech City, CA
 January 2023 – May 2024
 - Assisted in data collection, cleaning, and analysis, supporting ongoing projects that improved forecasting accuracy by 15%.
 - Created visualizations using Tableau to present insights to stakeholders, facilitating data-driven decision-making.

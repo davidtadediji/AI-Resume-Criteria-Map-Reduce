@@ -14,7 +14,7 @@ def main():
         for filename, evaluation in shared.get(EVALUATIONS, {}).items():
             qualified = "Yes" if evaluation.get(QUALIFIES, False) else "X"
             name = evaluation.get(CANDIDATE_NAME, "Unknown")
-            print(f"{qualified} {name} ({filename}")
+            print(f"{qualified} {name} ({filename})")
 
             if not evaluation.get(QUALIFIES):
                 print(

@@ -39,12 +39,16 @@ def generate_embedding(texts: List):
     return result.embeddings[0]
 
 
+import warnings
 from sentence_transformers import CrossEncoder
+from typing import List
 
 
 def call_reranker(query, items: List):
-    reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
-    scores = reranker.predict([[query, item] for item in items])
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+        scores = reranker.predict([[query, item] for item in items])
     return scores
 
 # import os

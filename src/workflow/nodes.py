@@ -6,8 +6,8 @@ from pocketflow import Node, BatchNode
 
 from src.constants import RESUMES, DATA_DIR_NAME, DEFAULT, EVALUATIONS, QUALIFIES, CANDIDATE_NAME, FILTER_SUMMARY, \
     CRITERIA, \
-    MANDATORY_CRITERIA, QUALIFIED_RESUMES
-from src.utils import call_llm, generate_embedding
+    MANDATORY_CRITERIA, QUALIFIED_RESUMES, FULL_CRITERIA, RANKED_RESUMES
+from src.utils import call_llm, generate_embedding, call_reranker
 
 
 class EmbedCriteriaNode(Node):
@@ -113,27 +113,89 @@ class ReduceFilterResultsNode(Node):
     def post(self, shared, prep_res, exec_res):
         filter_summary, qualified_resume_files = exec_res
         shared[FILTER_SUMMARY] = filter_summary
-        shared[QUALIFIED_RESUMES] = {filename: shared[RESUMES] for filename in qualified_resume_files}
 
-        print("\n==== Resume Qualification Summary ====")
-        print(f"Total candidates evaluation: {exec_res['total_candidates']} ")
-        print(f"Qualified candidates: {exec_res['qualified_count']} ({exec_res['qualified_percentage']}%")
+        print("\n==== Resume Hard Filtering Summary ====")
+        print(f"Total candidates evaluation: {filter_summary['total_candidates']} ")
+        print(f"Qualified candidates: {filter_summary['qualified_count']} ({filter_summary['qualified_percentage']}%")
 
-        if exec_res["qualified_names"]:
+        if filter_summary["qualified_names"]:
             print("\nQualified Candidates:")
-            for name in exec_res['qualified_names']:
+            for name in filter_summary['qualified_names']:
                 print(f"- {name}")
 
-        return "default"
+        shared[QUALIFIED_RESUMES] = {filename: shared[RESUMES][filename] for filename in qualified_resume_files}
 
-# class RankResumeNode(Node):
-#     def prep(self, shared):
-#         return shared[QUALIFIED_RESUMES]
-#
-#     def exec(self, prep_res: Dict):
-#         """ Remember: exec should be isolated from shared environment"""
-#         [for filename in prep_res]
-#         response = call_llm(prompt)
-#
-#     def post(self, shared, prep_res, exec_res):
-#         pass
+        return DEFAULT
+
+
+class RankResumeNode(Node):
+    def prep(self, shared):
+        return shared[QUALIFIED_RESUMES]
+
+    def exec(self, prep_res: Dict):
+        """ Remember: exec should be isolated from shared environment"""
+        filenames = []
+        resumes = []
+
+        for filename, resume in prep_res.items():
+            filenames.append(filename)
+            resumes.append(resume)
+
+        scores = call_reranker(FULL_CRITERIA, resumes)
+
+        resume_scores = zip(zip(filenames, resumes), scores)
+
+        ranked_resumes = sorted(resume_scores, key=lambda x: x[1], reverse=True)
+
+        print(ranked_resumes)
+
+        return ranked_resumes
+
+    def post(self, shared, prep_res, exec_res):
+        shared[RANKED_RESUMES] = exec_res
+        return DEFAULT
+
+
+class ProcessRankResultsNode(Node):
+    """Reduce node: Process and summarize ranked resume results."""
+
+    def prep(self, shared):
+        return shared[RANKED_RESUMES]
+
+    def exec(self, ranked_results):
+        """
+        ranked_results: List of tuples like [ ((filename, resume), score), ... ]
+        """
+        total_ranked = len(ranked_results)
+        top_n = 10  # You can adjust or make dynamic
+
+        # Extract filenames and scores
+        ranked_filenames = [item[0][0] for item in ranked_results]
+        ranked_scores = [item[1] for item in ranked_results]
+
+        # Build summary dict
+        summary = {
+            "total_ranked": total_ranked,
+            "top_n": min(top_n, total_ranked),
+            "top_candidates": [
+                {"filename": ranked_results[i][0][0], "score": ranked_results[i][1]}
+                for i in range(min(top_n, total_ranked))
+            ],
+        }
+
+        return summary, ranked_filenames, ranked_scores
+
+    def post(self, shared, prep_res, exec_res):
+        summary, ranked_filenames, ranked_scores = exec_res
+        shared["RANKING_SUMMARY"] = summary
+        shared["RANKED_FILENAMES"] = ranked_filenames
+        shared["RANKED_SCORES"] = ranked_scores
+
+        print("\n==== Resume Ranking Summary ====")
+        print(f"Total ranked resumes: {summary['total_ranked']}")
+        print(f"Top {summary['top_n']} candidates:")
+
+        for candidate in summary["top_candidates"]:
+            print(f"- {candidate['filename']} (score: {candidate['score']:.4f})")
+
+        return DEFAULT
