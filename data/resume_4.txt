@@ -1,54 +1,66 @@
-**Zyra Quixley**  
-1234 Abcdef St.  
-Somewhere, ST 12345  
-(555) 123-4567  
-zyra.quixley@email.com  
+**Candidate 4**  
+[Your Address]  
+[City, State, Zip]  
+[Your Email]  
+[Your Phone Number]  
+[LinkedIn Profile]  
 
 ---
 
-**Objective**  
-Enthusiastic and detail-oriented individual seeking a challenging position in the tech industry to utilize my unique perspective and passion for learning.
+**PROFESSIONAL SUMMARY**  
+Detail-oriented and experienced software engineer with over 5 years of expertise in software development and a solid foundation in computer science. Proven track record in analyzing, designing, and implementing software solutions that drive business success. Strong proficiency in full software development lifecycle with a focus on delivering high-quality products on time and within budget.
 
 ---
 
-**Education**  
-High School Diploma  
-Somewhere High School, Somewhere, ST  
-Graduated: May 2010
+**EDUCATION**  
+Bachelor of Science in Computer Science  
+[University Name], [City, State]  
+Graduated: May 2018  
 
 ---
 
-**Work Experience**  
+**PROFESSIONAL EXPERIENCE**  
 
-**Sales Associate**  
-Widgets Unlimited, Somewhere, ST  
-June 2015 - Present  
-- Assisted customers in selecting products and provided exceptional service.
-- Maintained inventory and organized merchandise displays.
-- Collaborated with team members to achieve sales targets.
+**Software Engineer**  
+[Company Name], [City, State]  
+June 2019 – Present  
 
-**Barista**  
-Café Delight, Somewhere, ST  
-January 2012 - May 2015  
-- Prepared and served coffee and beverages to customers.
-- Managed cash register and handled customer transactions.
-- Worked in a fast-paced environment while maintaining a friendly attitude.
+- Developed and maintained scalable web applications using Java, Spring Boot, and Angular, improving application performance by 30%.
+- Collaborated with cross-functional teams to gather requirements and conduct system analysis, resulting in the successful delivery of over 10 major projects.
+- Enhanced the user interface and user experience of existing applications, which increased customer satisfaction ratings by 25%.
+- Implemented RESTful APIs to support mobile applications, ensuring seamless integration and data transfer between systems.
+- Participated in code reviews and mentoring sessions for junior developers, fostering a culture of continuous learning and improvement.
 
----
+**Junior Software Developer**  
+[Previous Company Name], [City, State]  
+July 2018 – May 2019  
 
-**Technical Skills**  
-- Basic knowledge of Microsoft Office Suite (Word, Excel, PowerPoint)
-- Familiarity with social media platforms and digital communication tools
-- Proficient in using point-of-sale (POS) systems
+- Assisted in the design and development of internal tools and applications using Python, Django, and MySQL, streamlining workflow and reducing processing time by 20%.
+- Conducted testing and debugging of software components to ensure quality and performance standards were met before deployment.
+- Collaborated with project managers and stakeholders to define project scope, objectives, and timelines, contributing to effective project delivery.
+- Maintained documentation for software development processes and user manuals, providing clarity and guidance for future reference.
 
 ---
 
-**Certifications**  
-- Customer Service Excellence Certification, 2016
+**TECHNICAL SKILLS**  
+- **Programming Languages:** Java, Python, JavaScript  
+- **Frameworks/Technologies:** Spring Boot, Angular, Django, RESTful APIs  
+- **Databases:** MySQL, PostgreSQL  
+- **Tools:** Git, Docker, Jenkins, JIRA  
+- **Methodologies:** Agile, Scrum  
 
 ---
 
-**Interests**  
-- Creative writing and storytelling  
-- Community volunteering and event planning  
-- Exploring new coffee brewing techniques  
+**CERTIFICATIONS**  
+- Certified Java Programmer (Oracle)  
+- AWS Certified Developer – Associate  
+
+---
+
+**PROFESSIONAL AFFILIATIONS**  
+- Member, Association for Computing Machinery (ACM)  
+- Contributor, Open Source Projects on GitHub  
+
+--- 
+
+**References available upon request.**

@@ -1,69 +1,65 @@
-**Zyra Quillan**  
-123 Innovation Drive  
-Tech City, CA 90210  
-(555) 123-4567  
-zyra.quillan@email.com  
-[LinkedIn Profile](https://linkedin.com/in/zyraquillan)  
+**Candidate Name:** Candidate 3  
+**Contact Information:**  
+Email: candidate3@example.com  
+Phone: (123) 456-7890  
+Location: Anytown, USA  
 
 ---
 
-**PROFESSIONAL SUMMARY**  
-Dedicated software developer with 2 years of experience in designing, developing, and implementing software solutions. Proficient in data analysis and programming languages, with a strong ability to collaborate effectively in team environments. Committed to leveraging technical skills to enhance system performance and drive business results.
+**Objective**  
+Motivated and creative individual seeking an opportunity to learn and grow within a dynamic work environment.
 
 ---
 
-**EDUCATION**
-Bachelor of Science in Computer Science
-University of Techland, Tech City, CA
-Graduated: May 2020
+**Education**  
+**Bachelor of Arts in Fine Arts**  
+University of Arts, Anytown, USA  
+Graduated: May 2020  
 
 ---
 
-**WORK EXPERIENCE**
+**Work Experience**  
 
-**Software Developer**
-Innovative Solutions Inc., Tech City, CA
-June 2024 – Present
-- Developed and maintained web applications using JavaScript, React, and Node.js, resulting in a 30% increase in user engagement.
-- Collaborated with cross-functional teams to analyze user requirements and deliver software solutions that improved operational efficiency.
-- Conducted data analysis using Python and SQL, generating reports that informed key business decisions and strategy adjustments.
-- Implemented Agile methodologies to enhance project management and team productivity.
+**Art Instructor**  
+Creative Arts Center, Anytown, USA  
+June 2020 - Present  
+- Developed and implemented art programs for various age groups.  
+- Instructed classes in painting, drawing, and sculpture techniques.  
+- Collaborated with other instructors to create a vibrant learning community.  
 
-**Data Analyst Intern**
-DataSense Analytics, Tech City, CA
-January 2023 – May 2024
-- Assisted in data collection, cleaning, and analysis, supporting ongoing projects that improved forecasting accuracy by 15%.
-- Created visualizations using Tableau to present insights to stakeholders, facilitating data-driven decision-making.
-- Developed automated data processing scripts in Python, reducing manual work time by 25%.
-
----
-
-**TECHNICAL SKILLS**  
-- Programming Languages: JavaScript, Python, Java  
-- Web Technologies: HTML, CSS, React, Node.js  
-- Data Analysis Tools: SQL, Tableau, Excel  
-- Development Methodologies: Agile, Scrum  
-- Version Control: Git, GitHub  
+**Customer Service Representative**  
+Retail Co., Anytown, USA  
+January 2018 - May 2020  
+- Assisted customers with inquiries and product selection.  
+- Handled sales transactions and maintained a positive shopping environment.  
+- Received Employee of the Month award for outstanding service.  
 
 ---
 
-**CERTIFICATIONS**  
-- Certified Agile Developer (CAD)  
-- Data Science Professional Certificate (Coursera)  
+**Skills**  
+- Excellent communication and interpersonal skills  
+- Strong organizational and planning abilities  
+- Creative problem-solving techniques  
+- Basic knowledge of graphic design tools (Photoshop, Illustrator)  
 
 ---
 
-**PROFESSIONAL AFFILIATIONS**  
-- Member, Association for Computing Machinery (ACM)  
-- Member, Women in Technology International (WITI)  
+**Certifications**  
+- CPR and First Aid Certified  
+- Certificate in Basic Photography  
 
 ---
 
-**PROJECTS**  
-- **E-Commerce Web Application**: Led a team of 4 to build a fully functional e-commerce platform using MERN stack, integrating payment gateway and real-time tracking features.  
-- **Predictive Analytics Model**: Developed a predictive model using machine learning algorithms in Python that improved sales forecasting accuracy by 20%.
+**Volunteer Experience**  
+**Volunteer Event Coordinator**  
+Local Art Fair, Anytown, USA  
+March 2021 - Present  
+- Organized community art events to promote local artists.  
+- Coordinated logistics and engaged with participants to ensure successful events.  
 
 ---
 
-**REFERENCES**  
-Available upon request.
+**Hobbies**  
+- Painting and drawing  
+- Photography  
+- Attending cultural events and exhibitions

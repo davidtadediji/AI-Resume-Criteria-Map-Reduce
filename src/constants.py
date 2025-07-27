@@ -2,6 +2,7 @@ DATA_DIR_NAME = "data/"
 SCREENING_TOP_K = 10
 INTERVIEW_TOP_K = 3
 THRESHOLD = 0.35
+NUMBER_OF_TEST_RESUMES = 50
 
 # ===== State ======
 RESUMES = "resumes"
@@ -49,5 +50,5 @@ reasons:
 RESUME_GENERATION = """generate a single pre-personalized resume that {condition} this criteria:
 {criteria_for_qualification}
 Note: just generate the resume don't preface or add any conclusions, respond with resume directly and only
-use an unusual name for candidate.
+Candidate name is 'Candidate {seed_number}'.
 """

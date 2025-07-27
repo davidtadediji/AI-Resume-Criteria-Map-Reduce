@@ -35,7 +35,7 @@ def setup_logger(
     # —— Configuration from environment with sensible defaults ——
     name        = name        or os.getenv("APP_NAME", __name__)
     log_file    = log_file    or os.getenv("LOG_FILE", "app.log")
-    log_level   = (log_level  or os.getenv("LOG_LEVEL", "INFO")).upper()
+    log_level   = (log_level  or os.getenv("LOG_LEVEL", "DEBUG")).upper()
     max_bytes   = max_bytes   or int(os.getenv("LOG_MAX_BYTES", 10 * 1024 * 1024))  # 10 MB
     backup_count= backup_count or int(os.getenv("LOG_BACKUP_COUNT", 5))
     use_json    = use_json    if use_json is not None else os.getenv("JSON_LOGS", "false").lower() == "true"

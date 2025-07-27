@@ -1,48 +1,69 @@
-**Resume**
-
-**Zylar Quixley**  
-123 Fantasy Lane  
-Imaginary City, IC 12345  
-Email: zylar.quixley@email.com  
-Phone: (555) 123-4567  
-
----
-
-**Objective**  
-Dedicated and enthusiastic individual seeking a challenging position in a dynamic organization where I can contribute my unique skills and gain valuable experience.
+**Candidate 0**  
+[Your Address]  
+[City, State, Zip]  
+[Your Email]  
+[Your Phone Number]  
+[LinkedIn Profile]  
 
 ---
 
-**Education**  
-High School Diploma  
-Imaginary High School, Imaginary City, IC  
-Graduated: June 2015  
+### Objective  
+Dedicated and results-driven software engineer with over 3 years of experience in software development, seeking to leverage strong technical skills and a background in computer science to contribute to innovative projects.
 
 ---
 
-**Work Experience**  
-
-**Part-Time Barista**  
-Coffee Dreams, Imaginary City, IC  
-June 2018 - Present  
-- Provided excellent customer service and maintained a friendly atmosphere.  
-- Crafted beverages and managed inventory during busy shifts, enhancing the overall customer experience.  
-
-**Volunteer Coordinator**  
-Community Clean-Up Project, Imaginary City, IC  
-March 2017 - December 2018  
-- Coordinated community events and engaged with local volunteers to promote environmental awareness.  
-- Developed communication strategies to increase volunteer participation.  
+### Education  
+**Bachelor of Science in Computer Science**  
+[University Name] - [City, State]  
+Graduated: [Month, Year]
 
 ---
 
-**Skills**  
-- Exceptional interpersonal communication  
-- Time management and organizational skills  
-- Basic proficiency in Microsoft Office Suite (Word, Excel, PowerPoint)  
-- Creative problem-solving abilities  
+### Technical Skills  
+- Programming Languages: Java, C#, Python, JavaScript  
+- Web Technologies: HTML, CSS, React, Node.js  
+- Databases: MySQL, MongoDB, PostgreSQL  
+- Version Control: Git, GitHub  
+- Frameworks: Spring Boot, .NET, Django  
+- Agile Methodologies: Scrum, Kanban  
+- Tools: JIRA, Docker, Jenkins, Visual Studio Code  
 
 ---
 
-**References**  
+### Professional Experience  
+
+**Software Engineer**  
+[Company Name] - [City, State]  
+[Month, Year] - Present  
+- Developed and maintained web applications using Java, Spring Boot, and React, resulting in a 20% increase in user engagement.
+- Collaborated with cross-functional teams to define, design, and ship new features, meeting project deadlines consistently.
+- Implemented RESTful APIs for various services, enabling seamless integration with mobile applications.
+- Participated in code reviews and contributed to collective knowledge through documentation and mentoring junior developers.
+
+**Junior Software Developer**  
+[Company Name] - [City, State]  
+[Month, Year] - [Month, Year]  
+- Assisted in designing and developing internal tools using Python and Django, streamlining workflows and reducing processing time.
+- Worked closely with UI/UX design teams to enhance user interfaces, increasing accessibility and overall user satisfaction.
+- Conducted testing and debugging of applications, maintaining a bug fix rate of over 90% prior to deployment.
+- Engaged in Agile ceremonies, contributing to sprint planning, daily stand-ups, and retrospectives.
+
+---
+
+### Projects  
+**E-Commerce Website**  
+- Developed a fully functional e-commerce platform using React for the front end and Node.js for the back end, allowing users to browse, filter, and purchase products seamlessly.
+
+**Task Management Tool**  
+- Designed a task management web application to help teams manage projects with features such as drag-and-drop task assignment and real-time collaboration using WebSocket.
+
+---
+
+### Certifications  
+- Certified Java SE Programmer  
+- AWS Certified Developer - Associate  
+
+---
+
+### References  
 Available upon request.
