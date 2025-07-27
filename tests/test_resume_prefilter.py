@@ -1,6 +1,6 @@
-from src.constants import MANDATORY_CRITERIA
+from src.prompts import MANDATORY_CRITERIA
 from src.workflow.nodes import EmbedResumesNode, PrefilterResumesNode, EmbedCriteriaNode
-from tests.conftest import data_dir
+from tests.conftest import DATA_DIR
 
 
 def test_resume_pre_filtering():
@@ -11,7 +11,7 @@ def test_resume_pre_filtering():
     criteria_embedding = criteria_encoder.exec(MANDATORY_CRITERIA)
 
     filename = "resume_3.txt"
-    filepath = data_dir + filename
+    filepath = DATA_DIR + filename
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 

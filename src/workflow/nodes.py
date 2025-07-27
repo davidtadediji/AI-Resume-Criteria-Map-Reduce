@@ -5,12 +5,13 @@ import numpy as np
 import yaml
 from pocketflow import Node, BatchNode
 from sklearn.metrics.pairwise import cosine_similarity
-from src.utils.logger import configured_logger
 
 from src.constants import RESUMES, DATA_DIR_NAME, DEFAULT, EVALUATIONS, QUALIFIES, CANDIDATE_NAME, FILTER_SUMMARY, \
     CRITERIA_EMBEDDING, \
-    MANDATORY_CRITERIA, QUALIFIED_RESUMES, FULL_CRITERIA, RANKED_RESUMES, RESUME_EMBEDDINGS, THRESHOLD, \
-    RELEVANT_RESUMES, EVALUATION_RESULT_FORMAT
+     QUALIFIED_RESUMES, RANKED_RESUMES, RESUME_EMBEDDINGS, THRESHOLD, \
+    RELEVANT_RESUMES, SCREENING_TOP_N
+from src.prompts import MANDATORY_CRITERIA, EVALUATION_RESULT_FORMAT, FULL_CRITERIA
+from src.utils.logger import configured_logger
 from src.utils.models import call_llm, generate_embedding, call_reranker
 
 
@@ -107,7 +108,8 @@ class PrefilterResumesNode(Node):
         try:
             criteria_embedding, resume_embeddings, resumes = prep_res
             criteria_vector = np.array(criteria_embedding).reshape(1, -1)  # (1, D)
-            resume_similarity_scores = [cosine_similarity(criteria_vector, np.array(embedding).reshape(1, -1)).item() for
+            resume_similarity_scores = [cosine_similarity(criteria_vector, np.array(embedding).reshape(1, -1)).item()
+                                        for
                                         _, embedding in resume_embeddings.items()]
 
             relevant_resumes = {}
@@ -217,7 +219,8 @@ class ReduceFilterResultsNode(Node):
 
             configured_logger.info("\n==== Resume Hard Filtering Summary ====")
             configured_logger.info(f"Total candidates evaluation: {filter_summary['total_candidates']} ")
-            configured_logger.info(f"Qualified candidates: {filter_summary['qualified_count']} ({filter_summary['qualified_percentage']}%")
+            configured_logger.info(
+                f"Qualified candidates: {filter_summary['qualified_count']} ({filter_summary['qualified_percentage']}%")
 
             if filter_summary["qualified_names"]:
                 configured_logger.info("\nQualified Candidates:")
@@ -289,7 +292,7 @@ class ProcessRankResultsNode(Node):
         """
         try:
             total_ranked = len(ranked_results)
-            top_n = 10  # You can adjust or make dynamic
+            top_n = SCREENING_TOP_N
 
             # Extract filenames and scores
             ranked_filenames = [item[0][0] for item in ranked_results]

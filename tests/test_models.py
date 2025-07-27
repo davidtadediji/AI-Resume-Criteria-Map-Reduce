@@ -1,4 +1,4 @@
-from src.constants import MANDATORY_CRITERIA
+from src.prompts import MANDATORY_CRITERIA
 from src.utils.models import call_reranker, call_llm, generate_embedding
 
 

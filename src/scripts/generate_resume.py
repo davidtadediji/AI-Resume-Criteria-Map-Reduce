@@ -1,14 +1,14 @@
 import asyncio
 import os
 
-from src.constants import MANDATORY_CRITERIA, DATA_DIR_NAME, NUMBER_OF_TEST_RESUMES, RESUME_GENERATION
+from src.constants import DATA_DIR_NAME, NUMBER_OF_TEST_RESUMES
+from src.prompts import RESUME_GENERATION, MANDATORY_CRITERIA
 from src.utils.logger import configured_logger
 from src.utils.models import call_llm
 
-
-
 data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), DATA_DIR_NAME)
 os.makedirs(data_dir, exist_ok=True)
+
 
 def condition_generator(number):
     return number % 4 == 0
