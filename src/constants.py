@@ -1,9 +1,3 @@
-DATA_DIR_NAME = "data/"
-SCREENING_TOP_N = 10
-INTERVIEW_TOP_N = 3
-THRESHOLD = 0.35
-NUMBER_OF_TEST_RESUMES = 50
-
 # ===== State ======
 RESUMES = "resumes"
 DEFAULT = "default"

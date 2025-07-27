@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from src.constants import DATA_DIR_NAME, NUMBER_OF_TEST_RESUMES
+from src.config import DATA_DIR_NAME, NUMBER_OF_TEST_RESUMES
 from src.prompts import RESUME_GENERATION, MANDATORY_CRITERIA
 from src.utils.logger import configured_logger
 from src.utils.models import call_llm

@@ -2,7 +2,8 @@ import os
 
 import pytest
 
-from src.constants import DATA_DIR_NAME, QUALIFIED_RESUMES
+from src.config import DATA_DIR_NAME
+from src.constants import QUALIFIED_RESUMES
 
 DATA_DIR = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),

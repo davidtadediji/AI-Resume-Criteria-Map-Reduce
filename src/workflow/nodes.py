@@ -6,10 +6,11 @@ import yaml
 from pocketflow import Node, BatchNode
 from sklearn.metrics.pairwise import cosine_similarity
 
-from src.constants import RESUMES, DATA_DIR_NAME, DEFAULT, EVALUATIONS, QUALIFIES, CANDIDATE_NAME, FILTER_SUMMARY, \
+from src.config import THRESHOLD, SCREENING_TOP_N, DATA_DIR_NAME
+from src.constants import RESUMES, DEFAULT, EVALUATIONS, QUALIFIES, CANDIDATE_NAME, FILTER_SUMMARY, \
     CRITERIA_EMBEDDING, \
-     QUALIFIED_RESUMES, RANKED_RESUMES, RESUME_EMBEDDINGS, THRESHOLD, \
-    RELEVANT_RESUMES, SCREENING_TOP_N
+     QUALIFIED_RESUMES, RANKED_RESUMES, RESUME_EMBEDDINGS, \
+    RELEVANT_RESUMES
 from src.prompts import MANDATORY_CRITERIA, EVALUATION_RESULT_FORMAT, FULL_CRITERIA
 from src.utils.logger import configured_logger
 from src.utils.models import call_llm, generate_embedding, call_reranker
@@ -161,7 +162,7 @@ Resume:
             yaml_content = response.split("```yaml")[1].split("```")[0].strip() if "```yaml" in response else response
             result = yaml.safe_load(yaml_content)
 
-            configured_logger.info(result)
+            # configured_logger.debug(result)
 
             return filename, result
         except Exception as e:
