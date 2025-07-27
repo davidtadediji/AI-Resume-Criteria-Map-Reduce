@@ -18,7 +18,7 @@ def test_resume_pre_filtering():
     resume_item = (filename, content)
     resume_embedding = resume_encoder.exec(resume_item)
 
-    resume_embedding = {filename: resume_embedding}
+    resume_embedding = {filename: resume_embedding[1]}
     resume_item = {filename: content}
     relevant_resumes = resume_prefilter.exec((criteria_embedding, resume_embedding, resume_item))
 

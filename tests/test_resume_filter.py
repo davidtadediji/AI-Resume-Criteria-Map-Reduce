@@ -1,5 +1,5 @@
 from src.constants import QUALIFIES
-from src.workflow.nodes import EvaluateResumesNode
+from src.workflow.nodes import ScreenResumesNode
 from tests.conftest import data_dir
 
 
@@ -10,7 +10,7 @@ def test_resume_does_not_qualify():
 
     resume_item = (filename, content)
 
-    resume_filter = EvaluateResumesNode()
+    resume_filter = ScreenResumesNode()
     _, result = resume_filter.exec(resume_item)
 
     assert result[QUALIFIES] is False

@@ -1,5 +1,5 @@
 from src.constants import MANDATORY_CRITERIA
-from src.utils import call_reranker, call_llm, generate_embedding
+from src.utils.models import call_reranker, call_llm, generate_embedding
 
 
 def test_reranker_scores_match_length(resume_data):
